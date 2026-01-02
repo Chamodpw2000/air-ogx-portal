@@ -22,7 +22,9 @@ const Application = () => {
       })
         .then((res) => {
           if (res.data.success) {
-            setApplications(res.data.applications);
+            // Sort applications by date (latest first)
+            const sortedApplications = res.data.applications.sort((a, b) => new Date(b.dateapp) - new Date(a.dateapp));
+            setApplications(sortedApplications);
             setLoading(false);
           }
         })

@@ -8,13 +8,6 @@ const AddApplication = async (req,res)=>{
     const{name,email,_id}=req.user;
 
 
-    // console.log(pname);
-    // console.log(name);
-    // console.log(email);
-    // console.log(mobile);
-    // console.log(motivation);
-    // console.log(age);
-    // console.log(_id);
 
 
     
@@ -99,11 +92,13 @@ const Deleteapplication = async (req,res)=>{
                 return res.status(401).json({error:"No Application Found"})
             }
 
-            const deleteRecord = await ApplicationModel.findByIdAndDelete({_id : id})
-            const applications = await ApplicationModel.find({postedBy:req.user._id})
+            console.log(req.user)
+
+            await ApplicationModel.findByIdAndDelete({_id : id})
+           
 
 
-            return res.status(200).json({success:true,applications})
+            return res.status(200).json({success:true})
         } catch(err){
             return res.status(500).json({error:err.message})
         }

@@ -15,6 +15,7 @@ const Application = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(5); // You can adjust this number
     const [applications, setApplications] = useState([])
+    const [loading, setLoading] = useState(true) 
 
 
       useEffect(() => {
@@ -28,7 +29,9 @@ const Application = () => {
         })
           .then((res) => {
             if (res.data.success) {
-              setApplications(res.data.applications)
+              // Sort applications by date (latest first)
+              const sortedApplications = res.data.applications.sort((a, b) => new Date(b.dateapp) - new Date(a.dateapp));
+              setApplications(sortedApplications)
               
             }
           })
@@ -37,7 +40,7 @@ const Application = () => {
     
     
           });
-      }, [])
+      }, [loading])
 
 
         // Pagination logic
@@ -70,9 +73,9 @@ const Application = () => {
               headers: {
                 Authorization: `Berear ${localStorage.getItem("token")}`,
               },
-            }).then((res) => {
+            }).then(() => {
               
-                setApplications(res.data.applications);
+             
               
             
             
@@ -81,6 +84,7 @@ const Application = () => {
               text: "Your file has been deleted.",
               icon: "success"
             });
+          setLoading(!loading); // Refresh the data
           }).catch((err) => {
             
             console.log(err);
