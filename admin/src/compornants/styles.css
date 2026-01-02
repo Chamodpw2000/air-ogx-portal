@@ -1,0 +1,129 @@
+:root{
+    --background :#ffffff
+     ;
+    --text-color: black;
+
+}
+
+.header{
+    background-color:  var(--background);
+    
+}
+
+.menu-color{
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.container-fluid{
+    background-color: var(--background);
+    margin-bottom: 0px;
+}
+
+.image-small {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .title-margin {
+    margin-bottom: 10px; /* Adjust the margin as needed */
+  }
+  
+  .description-margin {
+    margin-top: 10px; /* Adjust the margin as needed */
+  }
+
+  .image-large {
+    width: 360px; /* Adjust the width as needed */
+    height: 225px; /* Maintain aspect ratio */
+  }
+
+  
+
+  .image-project {
+    width: 270px; /* Adjust the width as needed */
+    height: 225px; /* Maintain aspect ratio */
+  }
+
+  .hero {
+    background-image: url('../assets/images/hero.jpg'); /* Ensure this path is correct */
+    background-size: cover; /* Ensures the background image covers the whole section */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    padding: 20px 0; /* Adds padding to the top and bottom */
+    color: white; /* Changes text color to white for better readability */
+  }
+  
+  .text-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    padding: 20px; /* Adds padding inside the text container */
+    border-radius: 10px; /* Adds rounded corners */
+  }
+  
+ 
+
+  .container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+  background-color: rgba(0, 0, 100, 0.7); /* Dark blue with 70% opacity */
+  padding: 10px;
+  border-radius: 10px; /* Optional: Rounded corners */
+  color: #fff; /* Text color */
+  font-size: 25px; /* Increase text size to 18 pixels */
+
+}
+
+.back{
+
+  background-image: url(../assets/Images/bg.jpg);
+
+
+
+  
+
+
+
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../assets/Images/bg.jpg);
+  padding: 5px;
+  
+}
+
+.dd-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.input-group {
+  max-width: 400px; /* Adjust as needed */
+  width: 100%;
+}
+
+.small-logo {
+  width: 180px; /* Adjust the width as needed */
+  height: 30px; /* Maintain aspect ratio */
+ 
+}
+
+
+  
+
+
+
+
+  
+  
