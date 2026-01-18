@@ -17,7 +17,7 @@ import AdminHome from './pages/Home';
 import Footer from './compornants/Footer';
 import RegisterAdmin from './pages/Register';
 
-
+// 
 
 
 const App = () => {
